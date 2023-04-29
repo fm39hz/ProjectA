@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bny8wdrpui8m1"]
+
+[ext_resource type="PackedScene" uid="uid://b2ktd7aqiiv2r" path="res://Scene/Moveable/Player.tscn" id="1_5g27s"]
+
+[node name="RootScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_5g27s")]
+position = Vector2(135, 63)
