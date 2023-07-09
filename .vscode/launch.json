@@ -1,16 +1,20 @@
 {
+    "version": "0.0.1",
     "configurations": [
         {
-            "name": "Launch Godot",
+            "name": "Debug",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "buildGodot",
-            "program": "E:/Hienpham/Game_Engine/Godot/Godot_v4.0/Godot.exe",
+            "preLaunchTask": "Build",
+            "program": "/usr/bin/godot-mono",
             "cwd": "${workspaceFolder}",
-            "console": "externalTerminal",
+            "console": "internalConsole",
             "stopAtEntry": false,
             "requireExactSource": false,
             "enableStepFiltering": false,
-        }
+            "logging": {
+                "moduleLoad": false
+                },
+        }   
     ]
 }
