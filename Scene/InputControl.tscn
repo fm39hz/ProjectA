@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://je8wg5hdpd0u"]
+
+[ext_resource type="Script" path="res://Script/Controll/InputControll.cs" id="1_6wh5d"]
+[ext_resource type="PackedScene" uid="uid://bee3lq5os6k8i" path="res://Scene/Static/MainMenu.tscn" id="2_8hqn1"]
+
+[node name="InputControl" type="Control" groups=["Controller"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6wh5d")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenu" parent="." instance=ExtResource("2_8hqn1")]
+layout_mode = 1

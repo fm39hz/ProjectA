@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccwsp0gg5phy1"]
+
+[ext_resource type="Texture2D" uid="uid://hbmbeu8t8rtu" path="res://Asset/Texture/Mockup/bg.png" id="1_mvkoi"]
+[ext_resource type="PackedScene" uid="uid://b2ktd7aqiiv2r" path="res://Scene/Moveable/Player.tscn" id="2_tt7jg"]
+
+[node name="Game" type="Node2D" groups=["Game"]]
+y_sort_enabled = true
+
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = -4096
+texture = ExtResource("1_mvkoi")
+metadata/_edit_lock_ = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_tt7jg")]
+position = Vector2(160, 90)

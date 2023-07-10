@@ -22,6 +22,3 @@ shape = SubResource("CapsuleShape2D_60pu7")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, -10)
-process_callback = 0
-metadata/_edit_lock_ = true
