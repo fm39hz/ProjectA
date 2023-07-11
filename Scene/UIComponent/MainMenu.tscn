@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bee3lq5os6k8i"]
+[gd_scene load_steps=5 format=3 uid="uid://bee3lq5os6k8i"]
 
 [ext_resource type="Theme" uid="uid://bb0r77p3aj3wy" path="res://Theme/new_theme.tres" id="1_e13ik"]
 [ext_resource type="Script" path="res://Script/Interface/MainMenu.cs" id="1_naahm"]
 [ext_resource type="Script" path="res://Script/Interface/Settings.cs" id="1_ve4sr"]
+[ext_resource type="Script" path="res://Script/Interface/Quit.cs" id="4_tf6wi"]
 
 [node name="MainMenu" type="Control"]
 layout_direction = 1
@@ -15,27 +16,36 @@ grow_vertical = 2
 theme = ExtResource("1_e13ik")
 script = ExtResource("1_naahm")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -35.0
-offset_right = 35.0
 grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 65.0
 grow_vertical = 2
 theme_override_constants/separation = 5
 
-[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
 script = ExtResource("1_ve4sr")
 
-[node name="SaveButton" type="Button" parent="VBoxContainer"]
+[node name="SaveButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Save"
 
-[node name="LoadButton" type="Button" parent="VBoxContainer"]
+[node name="LoadButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Load"
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+script = ExtResource("4_tf6wi")
