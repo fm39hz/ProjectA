@@ -1,12 +1,12 @@
 using Godot;
 using ProjectA.Script.Interface;
 
-namespace ProjectA.Script.Controll;
-	public partial class InputControll : Control{
+namespace ProjectA.System.UI;
+	public partial class UIController : Control{
 		private MainMenu Menu { get; set; }
 		public override void _EnterTree(){
 			base._EnterTree();
-				this.Menu = GetChild<MainMenu>(0);
+				this.Menu = GetParent().GetChild<MainMenu>(1);
 				this.Menu.Visible = false;
 			}
 		public override void _Ready(){
@@ -16,10 +16,12 @@ namespace ProjectA.Script.Controll;
 			if (@event is InputEventKey _keyEscape){
 				if (_keyEscape.IsPressed() && _keyEscape.Keycode == Key.Escape){
 					if (this.Menu.Visible == false){
+						GetTree().Paused = true;
 						this.Menu.Show();
 						}
 					else{
 						this.Menu.Visible = false;
+						GetTree().Paused = false;
 						}
 					}
 				}

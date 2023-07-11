@@ -9,6 +9,5 @@ namespace ProjectA.Script.Interface;
 
 		public override void _Pressed(){
 			base._Pressed();
-			GD.Print("EnteredSettingsMenu");
 			}
 		}
