@@ -13,8 +13,8 @@ namespace ProjectA.System.UI;
 				}
 		public override void _Input(InputEvent @event){
 			base._Input(@event);
-			if (@event is InputEventKey _keyEscape){
-				if (_keyEscape.IsPressed() && _keyEscape.Keycode == Key.Escape){
+			if (@event is InputEventKey _keyMenu){
+				if (_keyMenu.IsPressed() && _keyMenu.Keycode == Key.Escape){
 					if (this.Menu.Visible == false){
 						GetTree().Paused = true;
 						this.Menu.Show();
@@ -26,4 +26,12 @@ namespace ProjectA.System.UI;
 					}
 				}
 			}
+    public override void _UnhandledInput(InputEvent @event){
+		base._UnhandledInput(@event);
+    	if (@event is InputEventKey _keyInventory){
+			if (_keyInventory.IsPressed() && Input.IsActionJustPressed("ui_inventory")){
+				
+				}
+			}
 		}
+}
