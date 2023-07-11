@@ -20,5 +20,3 @@ metadata/_edit_lock_ = true
 position = Vector2(-1, -8)
 shape = SubResource("CapsuleShape2D_60pu7")
 metadata/_edit_lock_ = true
-
-[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3rc16urkihpg"]
+
+[ext_resource type="Script" path="res://Script/Control/UIController.cs" id="1_pgb6d"]
+[ext_resource type="PackedScene" uid="uid://bee3lq5os6k8i" path="res://Scene/UIComponent/MainMenu.tscn" id="2_qvmmp"]
+
+[node name="UIScene" type="CanvasLayer"]
+process_mode = 3
+
+[node name="UIController" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pgb6d")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_qvmmp")]

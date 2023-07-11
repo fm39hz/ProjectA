@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bny8wdrpui8m1"]
 
-[ext_resource type="PackedScene" uid="uid://je8wg5hdpd0u" path="res://Scene/InputControl.tscn" id="1_vjoi0"]
-[ext_resource type="PackedScene" uid="uid://ccwsp0gg5phy1" path="res://Scene/Game.tscn" id="2_pggco"]
+[ext_resource type="PackedScene" uid="uid://ccwsp0gg5phy1" path="res://Scene/GameScene.tscn" id="2_pggco"]
+[ext_resource type="PackedScene" uid="uid://d3rc16urkihpg" path="res://Scene/UIScene.tscn" id="2_y7tdv"]
 
 [node name="RootScene" type="Node2D"]
 y_sort_enabled = true
 
-[node name="InputControl" parent="." instance=ExtResource("1_vjoi0")]
+[node name="GameScene" parent="." instance=ExtResource("2_pggco")]
 
-[node name="Game" parent="." instance=ExtResource("2_pggco")]
+[node name="UIScene" parent="." instance=ExtResource("2_y7tdv")]
