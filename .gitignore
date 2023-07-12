@@ -1,5 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 
-#Log files
+# Log files
 *.log
+
+# Linux build restore files
+project.godot-*
+project.godot.*
