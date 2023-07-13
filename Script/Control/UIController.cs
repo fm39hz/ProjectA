@@ -4,10 +4,13 @@ using ProjectA.Script.Interface;
 namespace ProjectA.System.UI;
 	public partial class UIController : Control{
 		private MainMenu Menu { get; set; }
+		public Inventory InventoryMenu { get; set; }
 		public override void _EnterTree(){
 			base._EnterTree();
 				this.Menu = GetParent().GetChild<MainMenu>(1);
+				this.InventoryMenu = GetParent().GetChild<Inventory>(2);
 				this.Menu.Visible = false;
+				this.InventoryMenu.Visible = false;
 			}
 		public override void _Ready(){
 				}
@@ -30,7 +33,12 @@ namespace ProjectA.System.UI;
 		base._UnhandledInput(@event);
     	if (@event is InputEventKey _keyInventory){
 			if (_keyInventory.IsPressed() && Input.IsActionJustPressed("ui_inventory")){
-				
+				if (this.InventoryMenu.Visible == false && !this.Menu.Visible){
+					this.InventoryMenu.Show();
+					}
+				else {
+					this.InventoryMenu.Visible = false;
+					}
 				}
 			}
 		}

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbtqku3y7qkcq"]
+
+[ext_resource type="Script" path="res://Script/Interface/Inventory.cs" id="1_4yi4d"]
+[ext_resource type="Texture2D" uid="uid://gnkfj1pw6vss" path="res://Asset/Texture/Mockup/InventoryUI.png" id="2_17in3"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4yi4d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.325
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_17in3")

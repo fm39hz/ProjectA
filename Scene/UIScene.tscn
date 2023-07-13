@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3rc16urkihpg"]
+[gd_scene load_steps=4 format=3 uid="uid://d3rc16urkihpg"]
 
 [ext_resource type="Script" path="res://Script/Control/UIController.cs" id="1_pgb6d"]
 [ext_resource type="PackedScene" uid="uid://bee3lq5os6k8i" path="res://Scene/UIComponent/MainMenu.tscn" id="2_qvmmp"]
+[ext_resource type="PackedScene" uid="uid://dbtqku3y7qkcq" path="res://Scene/UIComponent/Inventory.tscn" id="3_f01u3"]
 
 [node name="UIScene" type="CanvasLayer"]
 process_mode = 3
@@ -16,3 +17,5 @@ grow_vertical = 2
 script = ExtResource("1_pgb6d")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_qvmmp")]
+
+[node name="Inventory" parent="." instance=ExtResource("3_f01u3")]
